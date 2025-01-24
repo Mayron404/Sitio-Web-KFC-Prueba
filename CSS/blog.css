@@ -1,0 +1,480 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 32px;
+    color: #202124;
+}
+
+h2{
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 24px;
+    color: #000000DE;
+}
+
+/**** Sección Header ****/
+
+.offcanvas-start {
+    width: 80% !important;
+}
+
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+header {
+    height: 83px;
+    -webkit-box-shadow: 0px 10px 54px -38px rgba(227, 31, 46, 1);
+    -moz-box-shadow: 0px 10px 54px -38px rgba(227, 31, 46, 1);
+    box-shadow: 0px 10px 54px -38px rgba(227, 31, 46, 1);
+    position: fixed;
+    /* Hace que el menú quede fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Asegura que quede por encima de otros elementos */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav.navbar {
+    height: 100%;
+    /* Asegúrate de que la altura del navbar ocupe todo el header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Alinea todo verticalmente */
+}
+
+.navbar-nav .nav-item .nav-link {
+    line-height: 1.5;
+    /* Ajusta el line-height para el texto del menú */
+    padding: 0.5rem
+        /* Añadir padding para mejor espacio alrededor del texto */
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    /* Centra el ícono de usuario verticalmente */
+    justify-content: center;
+    padding: 0.5rem;
+    /* Añadir padding para mejor espacio alrededor del ícono */
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.navbar-nav .nav-link {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.navbar-brand img {
+    /* max-height: 65px;  Reducir tamaño del logo */
+    max-width: 235px;
+    max-height: 48px;
+
+}
+
+.custom-close {
+    position: absolute;
+}
+
+.btn-close:focus {
+    --bs-btn-close-focus-shadow: none;
+    box-shadow: none;
+    /* Asegura que tampoco haya sombra */
+}
+
+/*Off Canvas*/
+
+/* Para quitar el borde del botón hamburguesa */
+.navbar-toggler {
+    border: none !important;
+    background: transparent !important;
+}
+
+.accordion-button {
+    padding-inline: 0px !important;
+    padding-block: 0px !important;
+}
+
+.accordion-body .d-flex {
+    gap: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.accordion-header {
+    border-top: none !important;
+}
+
+.accordion-header button a {
+    color: #000000 !important;
+    font-size: 16px !important;
+    border-top: none !important;
+}
+
+.day,
+.info p {
+    color: #686D76;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: none !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.offcanvas-body a {
+    color: #E31F2E !important;
+    font-size: 23px !important;
+    font-family: "Oswald", sans-serif;
+    padding-block: 15px !important;
+}
+
+.social-icons-canvas {
+    margin-bottom: 20px;
+}
+
+.social-icons-canvas button {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding-inline: 10px;
+    padding-block: 10px;
+    border: 2px solid #E31F2E;
+    background-color: white;
+}
+
+.offcanvas-body .nav-link {
+    border-bottom: 1px solid rgb(233, 235, 238) !important;
+}
+
+/* Media Query - Mobile Mini */
+@media (min-width: 320px) and (max-width: 991) {
+    .navbar-toggler {
+        order: 1;
+        /* Botón hamburguesa a la izquierda */
+    }
+
+    .navbar-brand {
+        order: 2;
+        /* Logo en el centro */
+    }
+
+    .user-icon {
+        order: 3;
+        /* Botón de usuario a la derecha */
+    }
+
+    .navbar-collapse {
+        text-align: justify;
+        padding-inline: 15px;
+        padding-block: 20px;
+    }
+
+
+    /* Asegurar que el menú se despliegue hacia abajo */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #f8f9fa;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+/* Media Query - Mobile */
+@media (max-width: 991px) {
+    .navbar-toggler {
+        order: 1;
+        /* Botón hamburguesa a la izquierda */
+    }
+
+    .navbar-brand {
+        order: 2;
+        /* Logo en el centro */
+    }
+
+    .user-icon {
+        order: 3;
+        /* Botón de usuario a la derecha */
+    }
+
+    .navbar-collapse {
+        text-align: justify;
+        padding-inline: 15px;
+        padding-block: 20px;
+    }
+
+    /* Asegurar que el menú se despliegue hacia abajo */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #f8f9fa;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+/* Media Query - Tablet */
+@media (min-width: 768px) and (max-width: 992) {
+    .navbar-nav {
+        margin-left: 20px;
+        /* Alineación a la izquierda */
+    }
+
+    .navbar-collapse {
+        justify-content: flex-start;
+        /* Alinear elementos a la izquierda */
+    }
+
+    .offcanvas-start {
+        width: 60% !important;
+    }
+}
+
+/* Media Query - Desktop */
+@media (min-width: 992px) {
+    .navbar-nav {
+        margin-left: 20px;
+        /* Alineación a la izquierda */
+    }
+
+    .navbar-collapse {
+        justify-content: flex-start;
+        /* Alinear elementos a la izquierda */
+    }
+}
+
+/**** Sección Pedí Aquí ****/
+
+.seccion_pediAqui {
+    display: flex;
+    flex-direction: row;
+    /* Disposición en fila en pantallas grandes */
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+    background-color: #fff;
+}
+
+.seccion_pediAqui .titulo_pediAqui {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.seccion_pediAqui .titulo_pediAqui h1 {
+    font-family: 'Oswald';
+    font-weight: bold;
+    font-size: 32px;
+    color: #202124;
+    margin-right: 2rem;
+}
+
+.seccion_pediAqui .titulo_pediAqui h2 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: #202124;
+    margin-top: 1px;
+}
+
+#button_pediAqui {
+    text-align: center;
+    background-color: #E31F2E;
+    border-color: #E31F2E;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    font-family: "Oswald";
+    font-weight: bold;
+    color: #fff;
+    width: 256px;
+    height: 77px;
+    border-radius: 22px;
+    padding-top: 1px;
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+}
+
+#button_pediAqui-zoom {
+    background-color: #E31F2E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    /* Suaviza el zoom */
+}
+
+#button_pediAqui:hover {
+    transform: scale(1.1);
+    /* Aumenta el tamaño del botón */
+}
+
+#button_pediAqui img {
+    width: 50px;
+    margin-right: 1.5rem;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media Query - Mobile */
+@media (max-width: 767px) {
+    .seccion_pediAqui {
+        flex-direction: column;
+        /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .seccion_pediAqui .titulo_pediAqui h1 {
+        font-size: 24px;
+        /* Reduce el tamaño del título */
+        margin-right: 0;
+        /* Elimina el margen derecho */
+    }
+
+    .seccion_pediAqui .titulo_pediAqui h2 {
+        font-size: 16px;
+        /* Aumenta un poco el tamaño del subtítulo */
+        margin-top: 0.5px;
+    }
+
+    #button_pediAqui {
+        width: 200px;
+        /* Ajusta el tamaño del botón */
+        height: 60px;
+        font-size: 20px;
+        /* Reduce el tamaño de la fuente en el botón */
+        margin-top: 1rem;
+        margin-left: -7px;
+        /* Ajusta el margen superior */
+    }
+
+    #button_pediAqui img {
+        width: 40px;
+        /* Ajusta el tamaño del ícono */
+        margin-right: 1rem;
+        /* Ajusta el margen derecho del ícono */
+    }
+}
+
+/* Media Query - Tablet (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .seccion_pediAqui {
+        margin-bottom: 5px;
+    }
+
+    .titulo_pediAqui h1 {
+        font-size: 30px;
+        /* Reducir el tamaño del título */
+    }
+
+    .titulo_pediAqui h2 {
+        margin-top: -3rem;
+        font-size: 40px;
+        /* Reducir el tamaño del subtítulo */
+    }
+
+    #button_pediAqui {
+        padding: 10px 25px;
+        font-size: 16px;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: -20px;
+    }
+
+    #button_pediAqui img {
+        width: 50px;
+        /* Reducir el tamaño del ícono */
+        margin-right: 15px;
+        /* Ajustar espacio del ícono */
+    }
+}
+
+/**** Sección Blog ****/
+.seccion_blog {
+    margin-top: 30px;
+}
+
+.section_titulo_blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    background-image: url(../imagenes_blog/fondo_titulo_blog.jpg);
+    background-size: cover;
+    background-position: 50% 42%;
+    /* 50% horizontal y 20% vertical */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Color negro con 50% de opacidad */
+    background-blend-mode: overlay;
+    /* Combina el color con la imagen */
+}
+
+.card_noticia {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.card_noticia .card-img-top {
+    max-height: 215px;
+    display: flex;
+    padding-block: 20px;
+    padding-inline: 20px;
+}
+
+.card-body{
+    border: none !important;
+}
+
+.card-body h2{
+    text-align: left;
+}
+
+#btn_ver_mas {
+    width: 140px;
+    height: 60.43px;
+    margin-top: 30px;
+    border-radius: 25px;
+    background-color: #E31F2E;
+    border-color: #E31F2E;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Suaviza el zoom */
+}
